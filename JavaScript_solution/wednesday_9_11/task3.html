@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>task3</title>
+
+  <style>
+    div {
+      width: 30%;
+      height: 100px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  
+  <select id="selectStyle" onchange="selectStyle(selectStyle)">
+    <option  id="Arial"   value="arial">Arial</option>
+    <option  id="Amet"    value="amet">Amet</option>
+    <option  id="verdana" value="verdana">Verdana</option>
+  </select>
+
+  <select id="selectFont" onchange="selectFont(selectFont)">
+    <option  value="12px">12pt</option>
+    <option  value="14px">14px</option>
+    <option  value="14px">16px</option>
+    <option  value="16px">18px</option>
+  </select>
+
+  <label>Italic</label>
+  <input type="checkbox" id="italic" onchange="style1()">
+
+  <label>bold</label>
+  <input type="checkbox" id="bold" onchange="bold()">
+
+  <label>Underline</label>
+  <input type="checkbox" id="underLine"onchange="line()" >
+
+  <br>
+  <br>
+<div id="par">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, exercitationem.
+</div>
+
+<script src="./task3.js"></script>
+</body>
+</html>

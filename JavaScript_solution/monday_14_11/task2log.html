@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <style>
+        .container1 {
+            background-color: bisque;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            border: 1px solid black;
+            margin: 50px auto ;
+        }
+        .container1 label,input{
+            margin: 0 auto;
+            
+        }
+        button {
+            width: 50%;
+            margin: 0 auto;
+        }
+        div {
+            display: none;
+            color: red;
+            font-size: 0.8em;
+            justify-content: center;
+        }
+        #finishMessage{
+            background-color: red;
+            color: aliceblue;
+            border: 4px solid aliceblue;
+            font-size: 3em;
+            padding: 40px;
+            text-align: center;
+            width: 35%;
+            margin: 0 auto;
+        }
+    </style>
+    
+</head>
+<body>
+    <form class="container1" id="form">
+       
+        <label>email</label>
+        <input type="email" id="Email1" name="Email1" >
+        <div id="emailMessage">*please inert true email</div>
+        <label>password </label>
+        <input type="password" id="password1" name="password1" >
+        <div id="passMessage">*please inert true password</div>
+        <br>
+        <br>
+        <button type="submit" >log in</button>
+    </form>
+<div id="finishMessage">hi</div>
+
+<script>
+
+let form2 = document.getElementById(`form`)
+let data =JSON.parse(localStorage.getItem("userData"))
+console.log(data);
+
+form2.addEventListener('submit', login)
+
+function login(e){
+    e.preventDefault()
+
+let aar =data.map (function(ele){
+var mail1 = document.getElementById(`Email1`).value
+var pass_word1 = document.getElementById(`password1`).value
+// var mail = document.getElementById(`Email`).value
+// var pass_word = document.getElementById(`password`).value
+
+if (mail1 === data[data.length-1].Email && pass_word1 === data[data.length-1].password){
+// if (mail1 === ele[ele.length-1].Email && pass_word1 === ele[ele.length-1].password){
+// if (mail1 === ele.Email && pass_word1 === ele.password){
+console.log(`yes`)
+form2.style.display=`none`
+form.style.display=`none`
+let i=1
+if (i=1){
+// document.getElementById(`finishMessage`).style.display=`block`
+let myElement=document.createElement("span")
+myElement.style.cssText=`  
+            background-color: red;
+            color: aliceblue;
+            border: 4px solid aliceblue;
+            font-size: 3em;
+            padding: 40px;
+            text-align: center;
+            width: 15%;
+            margin: 100px 100px;
+            display:inline-block`
+let myText =document.createTextNode(`Hi ${data[data.length-1].firstName}`)
+myElement.appendChild(myText);
+document.body.appendChild(myElement);
+console.log(myElement)
+console.log(data[data.length-1].firstName)
+++i}
+}else{
+     document.getElementById(`passMessage`).style.display=`flex`
+    document.getElementById(`emailMessage`).style.display=`flex`
+//  window.location = "./login.html";
+}
+})
+// localStorage.clear()
+}
+</script>
+</body>
+</html>

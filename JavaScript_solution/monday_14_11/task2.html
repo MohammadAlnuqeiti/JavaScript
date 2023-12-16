@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <style>
+        .container {
+            background-color: bisque;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            border: 1px solid black;
+            margin: 50px auto ;
+        }
+        .container label,input{
+            margin: 0 auto;
+            
+        }
+        button {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .container1 {
+            background-color: bisque;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 20%;
+            border: 1px solid black;
+            margin: 50px auto ;
+            display: none;
+            
+        }
+        .container1 label,input{
+            margin: 0 auto;
+            
+        }
+        button {
+            width: 50%;
+            margin: 0 auto;
+        }
+        div {
+            display: none;
+            color: red;
+            font-size: 0.8em;
+            justify-content: center;
+        }
+        #finishMessage{
+            background-color: red;
+            color: aliceblue;
+            border: 4px solid aliceblue;
+            font-size: 3em;
+            padding: 40px;
+            text-align: center;
+            width: 35%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <form class="container">
+        <label>first name</label>
+        <input type="text" id="firstName" name="firstName" onblur="checkFname()" >
+        <p id="check"></p>
+        <span style="display: none;">please</span>
+
+        <label>last name</label>
+        <input type="text" id="lastName" name="lastName" onblur="checkFname()">
+        <p id="check_lname"></p>
+
+        <label>email</label>
+        <input type="email" id="Email" name="Email" onblur="checkFname()">
+        <p id="check_email"></p>
+
+        <label>check email</label>
+        <input type="email" id="Email_check" name="Email" onblur="checkFname()">
+        <p id="check_email1"></p>
+
+        <label>password </label>
+        <input type="password" id="passWord" name="password" onblur="checkFname()">
+        <p id="check_pass"></p>
+
+        <label>check password </label>
+        <input type="password" id="password_check" name="password" onblur="checkFname()">
+        <p id="check_pass1"></p>
+
+        <label>phone number</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" onblur="checkFname()">
+        <p id="check_phone"></p>
+
+        <br>
+        <br>
+        <button type="submit" id="btn">register</button>
+    </form>
+    <!-- <form class="container1" id="form">
+       
+        <label>email</label>
+        <input type="email" id="Email1" name="Email1" >
+        <div id="emailMessage">*please inert true email</div>
+        <label>password </label>
+        <input type="password" id="password1" name="password1" >
+        <div id="passMessage">*please inert true password</div>
+        <br>
+        <br>
+        <button type="submit" >log in</button>
+    </form>
+<div id="finishMessage">hi</div> -->
+    <script src="./task2.js"></script>
+
+</body>
+</html>
